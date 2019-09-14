@@ -8,9 +8,9 @@ function App() {
   const [people, setPeople] = React.useState([]);
 
   async function getPeople() {
-    const res = await fetch(`${BASE_URL}/?count=${count}`);
+    const res = await fetch(`${BASE_URL}/?coount=${count}`);
     const resData = await res.json();
-    setPeople(resData.data);
+    setPeople(resData.accessMe);
   }
 
   return (

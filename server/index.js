@@ -5,6 +5,7 @@ const axios = require("axios");
 
 const app = express();
 
+// giving Client URL to server (where client app deployed OR from where the request will come and we handle that)
 const origin =
   process.env.NODE_ENV !== "production"
     ? "http://localhost:3000"
@@ -15,11 +16,13 @@ app.use(morgan("dev"));
 app.use(cors({ origin }));
 
 app.get("/", async (req, res) => {
-  const count = req.query.count || 20;
+
+  //fetching ```count``` parameter from the query strng (URL)
+  const count = req.query.coount || 20;
   const response = await axios.get(
     `https://randomuser.me/api/?results=${count}`
   );
-  res.json({ data: response.data.results });
+  res.json({ accessMe: response.data.results });
 });
 
 app.listen(4000, () => {
