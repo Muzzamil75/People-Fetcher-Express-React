@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "concurrently": "^4.1.2"
+  },
+  "scripts": {
+    "client-install"  : "cd client && yarn install",
+    "server-install"  : "cd server && yarn install",
+    "install-all-deps": "concurrently \"npm run server-install\" \"npm run client-install\""
+}
+}
