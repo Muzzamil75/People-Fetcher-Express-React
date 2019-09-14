@@ -7,3 +7,6 @@ using ```node index.js```
 
 #### Run the client  in client directory
 using ```yarn start```
+
+##### Cors packae -> only allows access to get data if it has deplyoment URL which is provided to it
+``` app.use(coors({}))
