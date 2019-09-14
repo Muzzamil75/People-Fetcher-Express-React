@@ -5,7 +5,7 @@ const axios = require("axios");
 
 const app = express();
 
-// giving Client URL to server (where client app deployed OR from where the request will come and we handle that)
+// giving Client-deplyment URL to server (where client app deployed OR from where the request will come and we handle that)
 const origin =
   process.env.NODE_ENV !== "production"
     ? "http://localhost:3000"
